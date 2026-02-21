@@ -1,0 +1,29 @@
+name: "Node CI (pnpm + lint + build)"
+description: "Sets up Node 20, installs pnpm deps, lints, and builds"
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: "pnpm"
+
+    - name: Install pnpm
+      uses: pnpm/action-setup@v3
+      with:
+        version: 9
+
+    - name: Install dependencies
+      shell: bash
+      run: pnpm install
+
+    - name: Lint
+      shell: bash
+      run: pnpm lint
+
+    - name: Build (includes type-check)
+      shell: bash
+      run: pnpm build
