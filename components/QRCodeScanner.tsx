@@ -3,8 +3,8 @@ import jsQR from 'jsqr';
 
 type ScanResult = { type: 'url'; url: string } | { type: 'address'; address: string };
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 interface QRCodeScannerProps {
+  // eslint-disable-next-line no-unused-vars
   onResult?: (result: ScanResult) => void;
   manualLabel?: string;
   autoStart?: boolean;

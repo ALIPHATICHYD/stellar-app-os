@@ -6,9 +6,9 @@ import { Badge } from '@/components/atoms/Badge';
 import { Button } from '@/components/atoms/Button';
 import { cn } from '@/lib/utils';
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export interface ComparisonTableProps {
   projects: CarbonProject[];
+  // eslint-disable-next-line no-unused-vars
   onAddToCart?: (projectId: string) => void;
   className?: string;
 }

@@ -9,11 +9,14 @@ declare module 'jsqr' {
     };
   }
 
-  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
   export default function jsQR(
+    // eslint-disable-next-line no-unused-vars
     data: Uint8ClampedArray,
+    // eslint-disable-next-line no-unused-vars
     width: number,
+    // eslint-disable-next-line no-unused-vars
     height: number,
+    // eslint-disable-next-line no-unused-vars
     options?: {
       inversionAttempts?: 'dontInvert' | 'onlyInvert' | 'attemptBoth' | 'invertFirst';
     }

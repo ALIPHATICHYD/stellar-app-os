@@ -84,9 +84,9 @@ export function applyFilters(projects: CarbonProject[], filters: ProjectFilters)
   });
 }
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export function extractUniqueValues<T extends string>(
   projects: CarbonProject[],
+  // eslint-disable-next-line no-unused-vars
   extractor: (project: CarbonProject) => T | T[]
 ): T[] {
   const values = new Set<T>();

@@ -15,11 +15,12 @@ export interface WalletConnection {
   balance: WalletBalance;
 }
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export interface WalletContextValue {
   wallet: WalletConnection | null;
+  // eslint-disable-next-line no-unused-vars
   connect: (type: WalletType, network?: NetworkType) => Promise<void>;
   disconnect: () => void;
+  // eslint-disable-next-line no-unused-vars
   switchNetwork: (network: NetworkType) => Promise<void>;
   refreshBalance: () => Promise<void>;
   isLoading: boolean;
@@ -27,7 +28,7 @@ export interface WalletContextValue {
   loadPersistedConnection: () => void;
 }
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export interface WalletConnectionProps {
+  // eslint-disable-next-line no-unused-vars
   onConnectionChange?: (connection: WalletConnection | null) => void;
 }

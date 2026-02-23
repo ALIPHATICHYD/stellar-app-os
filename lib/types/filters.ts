@@ -10,9 +10,9 @@ export interface ProjectFilters {
   coBenefits: string[];
 }
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export interface FilterSidebarProps {
   filters: ProjectFilters;
+  // eslint-disable-next-line no-unused-vars
   onFiltersChange: (filters: ProjectFilters) => void;
   availableTypes: ProjectType[];
   availableLocations: string[];

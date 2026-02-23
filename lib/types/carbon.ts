@@ -38,8 +38,8 @@ export interface CreditSelectionState {
   calculatedPrice: number;
 }
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export interface CreditSelectionProps {
   projects: CarbonProject[];
+  // eslint-disable-next-line no-unused-vars
   onSelectionChange?: (newSelection: CreditSelectionState) => void;
 }

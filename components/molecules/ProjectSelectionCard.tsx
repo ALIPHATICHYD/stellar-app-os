@@ -12,10 +12,10 @@ import { Checkbox } from '@/components/atoms/Checkbox';
 import { Badge } from '@/components/atoms/Badge';
 import { Text } from '@/components/atoms/Text';
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export interface ProjectSelectionCardProps {
   project: CarbonProject;
   isSelected: boolean;
+  // eslint-disable-next-line no-unused-vars
   onSelectionChange: (projectId: string, selected: boolean) => void;
   disabled?: boolean;
 }

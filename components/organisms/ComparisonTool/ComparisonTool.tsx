@@ -10,9 +10,9 @@ import { generateComparisonPDF } from '@/lib/utils/pdf';
 
 const MAX_COMPARISON = 3;
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export interface ComparisonToolProps {
   projects: CarbonProject[];
+  // eslint-disable-next-line no-unused-vars
   onAddToCart?: (projectId: string) => void;
 }
 

@@ -20,7 +20,7 @@ import { ExternalLink, Download, FileQuestion } from 'lucide-react';
 export function OrderHistoryTable() {
   const [orders, setOrders] = React.useState<Order[]>([]);
   const [loading, setLoading] = React.useState(true);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line no-unused-vars
   const [_error, setError] = React.useState<string | null>(null);
 
   const [page, setPage] = React.useState(1);
