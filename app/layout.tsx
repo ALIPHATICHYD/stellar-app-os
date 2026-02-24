@@ -1,11 +1,10 @@
-<<<<<<< feature/webhook-event-logs-viewer
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { Header } from '@/components/organisms/Header/Header';
 import { Footer } from '@/components/organisms/Footer/Footer';
 import './globals.css';
 import { WalletProviderWrapper } from '@/components/providers/WalletProviderWrapper';
-=======
+import { ToastProvider } from '@/components/providers/ToastProvider';
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { Header } from "@/components/organisms/Header/Header";
@@ -13,7 +12,6 @@ import { Footer } from "@/components/organisms/Footer/Footer";
 import "./globals.css";
 import { WalletProviderWrapper } from "@/components/providers/WalletProviderWrapper";
 import './globals.css';
->>>>>>> main
 
 
 
