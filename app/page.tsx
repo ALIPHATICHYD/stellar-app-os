@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import Link from 'next/link';
 import { useState } from 'react';
@@ -17,13 +17,10 @@ import { OnboardingTour } from '@/components/organisms/OnboardingTour/Onboarding
 import { useToast } from '@/components/ui/toast/hooks';
 import { TransactionHistoryModal } from '@/components/ui/TransactionHistoryModal';
 
-
 export default function Home() {
-
   const [showTx, setShowTx] = useState(false);
 
-
- const { addToast } = useToast();
+  const { addToast } = useToast();
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-8 p-8">
@@ -35,30 +32,24 @@ export default function Home() {
         </Text>
       </div>
 
-<CardContent className="flex flex-col gap-3">
-<Button
-      onClick={() =>
-        addToast({ message: "Profile saved!", variant: "success" })
-      }
-      variant="default" size="lg" className="w-full"
-    >
-      Show Toast
-    </Button>
-    </CardContent>
-
       <CardContent className="flex flex-col gap-3">
-  <Button
-        onClick={() => setShowTx(true)}
-        variant="default" size="lg" className="w-full"
-      >
-        Transactions
-      </Button>
+        <Button
+          onClick={() => addToast({ message: 'Profile saved!', variant: 'success' })}
+          variant="default"
+          size="lg"
+          className="w-full"
+        >
+          Show Toast
+        </Button>
       </CardContent>
 
-      <TransactionHistoryModal
-        open={showTx}
-        onClose={() => setShowTx(false)}
-      />
+      <CardContent className="flex flex-col gap-3">
+        <Button onClick={() => setShowTx(true)} variant="default" size="lg" className="w-full">
+          Transactions
+        </Button>
+      </CardContent>
+
+      <TransactionHistoryModal open={showTx} onClose={() => setShowTx(false)} />
 
       {/* Platform Stats */}
       <div
@@ -111,7 +102,12 @@ export default function Home() {
           >
             <Link href="/credits/purchase">Purchase Carbon Credits</Link>
           </Button>
-          <Button asChild variant="default" size="lg" className="w-full bg-green-500 hover:bg-green-600">
+          <Button
+            asChild
+            variant="default"
+            size="lg"
+            className="w-full bg-green-500 hover:bg-green-600"
+          >
             <Link href="/donate">Make a Donation</Link>
           </Button>
         </CardContent>
