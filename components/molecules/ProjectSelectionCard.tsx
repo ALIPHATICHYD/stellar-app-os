@@ -15,8 +15,7 @@ import { Text } from '@/components/atoms/Text';
 export interface ProjectSelectionCardProps {
   project: CarbonProject;
   isSelected: boolean;
-  // eslint-disable-next-line no-unused-vars
-  onSelectionChange: (projectId: string, selected: boolean) => void;
+  onSelectionChange: (_projectId: string, _selected: boolean) => void;
   disabled?: boolean;
 }
 

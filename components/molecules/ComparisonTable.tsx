@@ -8,8 +8,7 @@ import { cn } from '@/lib/utils';
 
 export interface ComparisonTableProps {
   projects: CarbonProject[];
-  // eslint-disable-next-line no-unused-vars
-  onAddToCart?: (projectId: string) => void;
+  onAddToCart?: (_projectId: string) => void;
   className?: string;
 }
 

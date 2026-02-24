@@ -12,8 +12,7 @@ const MAX_COMPARISON = 3;
 
 export interface ComparisonToolProps {
   projects: CarbonProject[];
-  // eslint-disable-next-line no-unused-vars
-  onAddToCart?: (projectId: string) => void;
+  onAddToCart?: (_projectId: string) => void;
 }
 
 export function ComparisonTool({ projects, onAddToCart }: ComparisonToolProps) {

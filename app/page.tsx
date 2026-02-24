@@ -1,4 +1,7 @@
+"use client"
+
 import Link from 'next/link';
+import { useState } from 'react';
 import { Button } from '@/components/atoms/Button';
 import { Text } from '@/components/atoms/Text';
 import { Badge } from '@/components/atoms/Badge';
@@ -11,8 +14,17 @@ import {
   CardContent,
 } from '@/components/molecules/Card';
 import { OnboardingTour } from '@/components/organisms/OnboardingTour/OnboardingTour';
+import { useToast } from '@/components/ui/toast/hooks';
+import { TransactionHistoryModal } from '@/components/ui/TransactionHistoryModal';
+
 
 export default function Home() {
+
+  const [showTx, setShowTx] = useState(false);
+
+
+ const { addToast } = useToast();
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-8 p-8">
       <div data-tour-id="hero-section" className="flex flex-col items-center gap-4 text-center">
@@ -22,6 +34,31 @@ export default function Home() {
           Decentralized agricultural credit platform built on the Stellar network.
         </Text>
       </div>
+
+<CardContent className="flex flex-col gap-3">
+<Button
+      onClick={() =>
+        addToast({ message: "Profile saved!", variant: "success" })
+      }
+      variant="default" size="lg" className="w-full"
+    >
+      Show Toast
+    </Button>
+    </CardContent>
+
+      <CardContent className="flex flex-col gap-3">
+  <Button
+        onClick={() => setShowTx(true)}
+        variant="default" size="lg" className="w-full"
+      >
+        Transactions
+      </Button>
+      </CardContent>
+
+      <TransactionHistoryModal
+        open={showTx}
+        onClose={() => setShowTx(false)}
+      />
 
       {/* Platform Stats */}
       <div
@@ -74,8 +111,8 @@ export default function Home() {
           >
             <Link href="/credits/purchase">Purchase Carbon Credits</Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="w-full">
-            <Link href="/projects">Browse Projects</Link>
+          <Button asChild variant="default" size="lg" className="w-full bg-green-500 hover:bg-green-600">
+            <Link href="/donate">Make a Donation</Link>
           </Button>
         </CardContent>
       </Card>
